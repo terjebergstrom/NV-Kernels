@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Makefile for the Realtek network device drivers.
+#
+
+ccflags-$(CONFIG_R8127) += -DCONFIG_SOC_LAN -DCONFIG_R8127_NAPI -DCONFIG_R8127_VLAN -DCONFIG_ASPM -DENABLE_S5WOL -DENABLE_EEE -DENABLE_TX_NO_CLOSE -DENABLE_GIGA_LITE -DCONFIG_R8127_NAPI -DCONFIG_R8127_VLAN
+obj-$(CONFIG_R8127) += r8127_n.o rtl_eeprom.o rtltool.o
+
